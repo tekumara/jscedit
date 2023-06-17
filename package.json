@@ -27,5 +27,8 @@
     "watch": "tsc -w",
     "lint": "eslint src/**/*.ts",
     "semantic-release": "semantic-release"
+  },
+  "release": {
+    "branches": ["main"]
   }
 }
