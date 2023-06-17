@@ -3,7 +3,6 @@
 import fs from "fs";
 import * as jsonc from "jsonc-parser";
 
-// Function to update a JSONC file
 function updateJsoncFile(
   filePath: string,
   keyPath: string,
@@ -35,18 +34,17 @@ function updateJsoncFile(
       process.stdout.write(modifiedContent);
     } else {
       fs.writeFileSync(filePath, modifiedContent, "utf8");
+      console.error(`Updated "${keyPath}" with "${value}"`);
     }
-    console.error(`Updated "${keyPath}" with "${value}"`);
   } else {
     console.error(`No changes made to ${filePath}`);
   }
 }
 
-// Example usage: node edit-jsonc.js file.jsonc keyPath value
 const args = process.argv.slice(2);
 if (args.length !== 3) {
   console.error(
-    "Usage: node jscedit.js <file.jsonc|- for stdin> <keyPath> <value>"
+    "Usage: jscedit <file.jsonc|- for stdin> <keyPath> <value>"
   );
 } else {
   const filePath = args[0];
