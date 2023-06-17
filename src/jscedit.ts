@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from "fs";
 import * as jsonc from "jsonc-parser";
 
@@ -43,7 +45,9 @@ function updateJsoncFile(
 // Example usage: node edit-jsonc.js file.jsonc keyPath value
 const args = process.argv.slice(2);
 if (args.length !== 3) {
-  console.error("Usage: node jscedit.js <file.jsonc|- for stdin> <keyPath> <value>");
+  console.error(
+    "Usage: node jscedit.js <file.jsonc|- for stdin> <keyPath> <value>"
+  );
 } else {
   const filePath = args[0];
   const keyPath = args[1];
