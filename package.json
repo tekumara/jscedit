@@ -5,6 +5,9 @@
   "license": "MIT",
   "repository": "github:tekumara/jscedit",
   "bin": "dist/jscedit.js",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "esbuild": "^0.18.4",
     "jsonc-parser": "^3.2.0"
@@ -19,8 +22,8 @@
   },
   "scripts": {
     "build": "esbuild src/jscedit.ts --platform=node --bundle --outfile=dist/jscedit.js --target=es2022 --main-fields=module,main",
-    "compile": "tsc -p ./src",
-    "watch": "tsc -w -p ./src",
+    "compile": "tsc",
+    "watch": "tsc -w",
     "lint": "eslint src/**/*.ts"
   }
 }
