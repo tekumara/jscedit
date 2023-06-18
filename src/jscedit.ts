@@ -19,7 +19,7 @@ function updateJsoncFile(
   const jsoncContent = jsonc.parseTree(fileContent);
   if (!jsoncContent) {
     console.error(`Invalid JSONC content`);
-    return;
+    process.exit(42);
   }
 
   // Create an edit to update the value
@@ -34,10 +34,7 @@ function updateJsoncFile(
       process.stdout.write(modifiedContent);
     } else {
       fs.writeFileSync(filePath, modifiedContent, "utf8");
-      console.error(`Updated "${keyPath}" with "${value}"`);
     }
-  } else {
-    console.error(`No changes made to ${filePath}`);
   }
 }
 

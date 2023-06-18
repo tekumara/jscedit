@@ -2,6 +2,7 @@
   "name": "jscedit",
   "version": "0.0.0-development",
   "description": "Edit jsonc files (eg: vscode settings.json)",
+  "keywords": ["jsonc", "edit", "vscode", "settings"],
   "license": "MIT",
   "repository": "github:tekumara/jscedit",
   "bin": "dist/jscedit.js",
