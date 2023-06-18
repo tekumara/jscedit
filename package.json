@@ -31,5 +31,8 @@
   },
   "release": {
     "branches": ["main"]
+  },
+  "publishConfig": {
+    "provenance": true
   }
 }
