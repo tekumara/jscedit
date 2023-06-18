@@ -20,6 +20,6 @@ Read/write from stdin/stdout:
 printf '{ # comment\n"foo" : "bar", }' | npx jscedit - '{ "k1": "v1" }'
 { # comment
 "foo": "bar",
-"key": "value",
+"k1": "v1",
 }
 ```
