@@ -23,9 +23,9 @@
     "typescript": "^5.1.3"
   },
   "scripts": {
-    "build": "esbuild src/jscedit.ts --platform=node --bundle --outfile=dist/jscedit.js --target=es2022 --main-fields=module,main",
     "compile": "tsc",
-    "watch": "tsc -w",
+    "build": "esbuild src/jscedit.ts --platform=node --bundle --outfile=dist/jscedit.js --target=es2022 --main-fields=module,main",
+    "watch": "esbuild src/jscedit.ts --platform=node --bundle --outfile=dist/jscedit.js --target=es2022 --main-fields=module,main --watch",
     "lint": "eslint src/**/*.ts",
     "semantic-release": "semantic-release"
   },

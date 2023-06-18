@@ -22,8 +22,10 @@ function updateJsoncFile(
     process.exit(42);
   }
 
+  const jsonValue = JSON.parse(value);
+
   // Create an edit to update the value
-  const editResult = jsonc.modify(fileContent, [keyPath], value, {
+  const editResult = jsonc.modify(fileContent, [keyPath], jsonValue, {
     formattingOptions: { tabSize: 2, insertSpaces: true },
   });
 
